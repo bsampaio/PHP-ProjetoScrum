@@ -12,19 +12,15 @@
 		endif;
 	endif;
 ?>
+<h1>Lista de Colaboradores</h1>
+<br/>
 <table class="table table-striped table-bordered">
-    <th>
-        Nome
-    </th>
-    <th>
-        Email
-    </th>
-    <th>
-        Data de Nascimento
-    </th>
-    <th>
-        Tipo
-    </th>
+    <th>Nome</th>
+    <th>Email</th>
+    <th>Data de Nascimento</th>
+    <th>Tipo</th>
+    <th>Alterar</th>
+    <th>Remover</th>
 	<?php
         if(!empty($colaboradores)):
 		foreach ($colaboradores as $colaborador) :
@@ -35,6 +31,13 @@
 			<td><input type="date" value="<?=$colaborador['datanascimento']?>" readonly="true"/></td>
 			<td><?=$colaborador['tipo_nome']?></td>
 			<td>
+				<center>
+						<a class="btn btn-warning" href="edita-colaborador-formulario.php?id=<?=$colaborador['id']?>">
+				            <span class="glyphicon glyphicon-edit"></span>
+                        </a>
+                </center>
+			</td>
+            <td>
 				<form action="remove-colaborador.php" method="POST">
 					<center>
 						<input type="hidden" name="id" value="<?=$colaborador['id']?>">

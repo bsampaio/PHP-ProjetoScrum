@@ -23,3 +23,20 @@ function removeColaborador($connection, $idColaborador){
 	$query = "DELETE FROM colaboradores WHERE colaboradores.id = {$idColaborador};";
 	return mysqli_query($connection, $query);
 }
+
+function buscaColaborador($connection, $idColaborador){
+    $colaboradores = array();
+    $query = "SELECT * FROM colaboradores WHERE colaboradores.id = {$idColaborador};";
+    $result = mysqli_query($connection, $query);
+    return mysqli_fetch_assoc($result);
+}
+
+function editaColaborador($connection, $idColaborador, $nome, $email, $datanascimento, $tipo_id){
+    $query = "UPDATE colaboradores
+                SET nome='{$nome}',
+                email='{$email}',
+                datanascimento='{$datanascimento}',
+                fk_tipos={$tipo_id}
+             WHERE colaboradores.id={$idColaborador};";
+    return mysqli_query($connection, $query);
+}
