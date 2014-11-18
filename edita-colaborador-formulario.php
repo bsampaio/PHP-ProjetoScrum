@@ -7,7 +7,6 @@
 
     $idColaborador = $_GET['id'];
     $colaborador = buscaColaborador($connection, $idColaborador);
-    echo "Colaborador:".$colaborador['nome'];
 ?>
 <h1>Formulário de cadastro de colaboradores</h1>
 <br/>
