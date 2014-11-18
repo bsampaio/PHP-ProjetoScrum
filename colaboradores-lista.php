@@ -1,7 +1,7 @@
 <?php include "header.php" ?>
 <?php include "conexao.php" ?>
 <?php include "produtos-functions.php" ?>
-<?php 
+<?php
 	$produtos = listaProdutos($connection);
 
 	if(isset($_GET["removido"])):
@@ -35,7 +35,7 @@
 				<?php endif ?>
 			</td>
 			<td>
-				<form action="remove-produto.php" method="POST"> 
+				<form action="remove-produto.php" method="POST">
 					<center>
 						<input type="hidden" name="id" value="<?=$produto['id']?>">
 						<button class="btn btn-danger">
