@@ -9,7 +9,7 @@
 	<div class="navbar navbar-inverse navbar-fixed-top">
 		<div class="container">
 			<div class="navbar-header">
-				<a class="navbar-brand" href="/index.php">SCRUM!</a>
+				<a class="navbar-brand" href="./">SCRUM!</a>
 			</div>
 			<div>
 				<ul class="nav navbar-nav">
