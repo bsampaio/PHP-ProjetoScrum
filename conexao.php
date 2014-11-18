@@ -3,7 +3,7 @@
 /**
  * Seguem os detalhes para login para o banco de dados CLEARDB no Heroku
  */
-$cleardb_url=parse_url(getenv("DATABASE_URL"));
+$cleardb_url=parse_url(getenv("CLEARDB_DATABASE_URL"));
 
 $dbServer = $cleardb_url["host"];
 $dbUser = $cleardb_url["user"];
