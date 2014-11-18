@@ -13,12 +13,13 @@ function listaColaboradores($connection){
 }
 
 function insereColaborador($connection, $nome, $email, $datanascimento, $tipo_id){
-	$query = "INSERT INTO produtos (nome, email, datanascimento, tipo_id) 
-	VALUES ('{$nome}', {$email}, '{$datanascimento}', {$tipo_id});";
+	$query = "INSERT INTO colaboradores (nome, email, datanascimento, fk_tipos)
+	VALUES ('{$nome}', '{$email}', '{$datanascimento}', {$tipo_id});";
+
 	return mysqli_query($connection, $query);
 }
 
-function removeProduto($connection, $idProduto){
-	$query = "DELETE FROM produtos WHERE produtos.id = {$idProduto};";
+function removeProduto($connection, $idColaborador){
+	$query = "DELETE FROM colaboradores WHERE colaboradores.id = {$idColaborador};";
 	return mysqli_query($connection, $query);
 }

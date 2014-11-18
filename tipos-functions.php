@@ -1,11 +1,11 @@
 <?php 
 
-function listaCategorias($conexao){
-	$categorias = array();
+function listaTipos($conexao){
+	$tipos = array();
 
 	$query = "SELECT * FROM tipos;";
 	$resultado = mysqli_query($conexao, $query);
-	while($categoria = mysqli_fetch_assoc($resultado)){
+	while($tipo = mysqli_fetch_assoc($resultado)){
 		array_push($tipos, $tipo);
 	}
 	

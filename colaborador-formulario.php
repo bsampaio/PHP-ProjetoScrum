@@ -1,11 +1,11 @@
 <?php include "header.php" ?>
 <?php include "conexao.php" ?>
-<?php include "categorias-functions.php" ?>
+<?php include "tipos-functions.php" ?>
 <?php 
-	$categorias = listaCategorias($connection);
+	$tipos = listaTipos($connection);
 ?>
 <h1>Formulário de cadastro de colaboradores</h1>
-	<form action="adiciona-produto.php" method="POST">
+	<form action="adiciona-colaborador.php" method="POST">
 		<table class="table">
 			<tr>
 				<td>Nome</td>
@@ -13,19 +13,19 @@
 			</tr>
 			<tr>
 				<td>Email</td>
-				<td><input class="form-control" type="number" name="email"></td>
+				<td><input class="form-control" type="email" name="email"></td>
 			</tr>
 			<tr>
 				<td>Data de Nascimento</td>
-				<td><textarea class="form-control" name="datanascimento"></textarea></td>
+				<td><input class="form-control" type="date" name="datanascimento"></td>
 			</tr>
 			<tr>
 				<td>Tipo</td>
 				<td>
-					<select name="categoria_id" class="form-control">
-					<?php foreach ($categorias as $categoria): ?>
-						<option value="<?=$categoria["id"]?>">
-							<?php echo $categoria["nome"];?>
+					<select name="tipo_id" class="form-control">
+					<?php foreach ($tipos as $tipo): ?>
+						<option value="<?=$tipo["id"]?>">
+							<?php echo $tipo["nome"];?>
 						</option>
 					<?php endforeach ?>
 					</select>
