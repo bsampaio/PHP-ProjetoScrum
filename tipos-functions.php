@@ -11,4 +11,3 @@ function listaTipos($conexao){
 	
 	return $tipos;
 }
-
