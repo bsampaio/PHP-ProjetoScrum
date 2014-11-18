@@ -14,7 +14,7 @@
 			<div>
 				<ul class="nav navbar-nav">
 					<li><a href="colaborador-formulario.php">Adicionar Colaborador</a></li>
-					<li><a href="produto-lista.php">Colaboradores</a></li>
+					<li><a href="colaborador-lista.php">Colaboradores</a></li>
 					<li><a href="sobre.php">Sobre</a></li>
 				</ul>
 			</div>
