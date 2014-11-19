@@ -15,7 +15,7 @@
 <h1>Lista de Colaboradores</h1>
 <br/>
 <div class="table-responsive">
-    <table class="table table-striped table-condensed">
+    <table class="table table-striped table-bordered">
         <th>Nome</th>
         <th>Email</th>
         <th>Data de Nascimento</th>
