@@ -14,7 +14,7 @@
 ?>
 <h1>Lista de Colaboradores</h1>
 <br/>
-<table class="table table-striped table-bordered">
+<table class="table table-striped table-condensed table-responsive">
     <th>Nome</th>
     <th>Email</th>
     <th>Data de Nascimento</th>
